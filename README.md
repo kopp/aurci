@@ -1,6 +1,8 @@
-# aurci [![Build Status](https://travis-ci.org/localnet/aurci.svg?branch=master)](https://travis-ci.org/localnet/aurci)
+# aurci [![Build Status](https://travis-ci.org/kopp/aurci.svg?branch=master)](https://travis-ci.org/kopp/aurci)
 
-Use [Travis CI](https://travis-ci.org/localnet/aurci) for building and packaging a few [AUR](https://aur.archlinux.org) packages and deploy them to [GitHub Releases](https://github.com/localnet/aurci/releases) so it can be used as repository in [Arch Linux](https://www.archlinux.org).
+Forked from [`localnet/aurci`](https://github.com/localnet/aurci).
+
+Use [Travis CI](https://travis-ci.org) for building and packaging a few [AUR](https://aur.archlinux.org) packages and deploy them to [GitHub Releases](https://github.com/kopp/aurci/releases) so it can be used as repository in [Arch Linux](https://www.archlinux.org).
 
 ## Use repository
 
@@ -9,7 +11,7 @@ To use as custom repository in [Arch Linux](https://www.archlinux.org), add to f
 ```
 [aurci]
 SigLevel = Optional TrustAll
-Server = https://github.com/localnet/aurci/releases/download/repository
+Server = https://github.com/kopp/aurci/releases/download/repository
 ```
 
 Then on the command line:
