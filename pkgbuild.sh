@@ -38,8 +38,6 @@ for pkgkey in ${pkgkeys[@]}; do
 done
 
 # Build outdated packages.
-# The grep is used to hide warning output from the travis ci logs (e.g. package qt4), otherwise they will fail with
-# "The job exceeded the maximum log length, and has been terminated."
-aur sync -d $pkgrepo --root "${HOME}/bin" -n ${pkglist[@]} 2>&1 | grep -v -e 'from ' -e '^\.\.' -e 'warning:' -e 'note:' -e ' | '
+aur sync -d $pkgrepo --root "${HOME}/bin" -n ${pkglist[@]}
 
 { set +ex; } 2>/dev/null
