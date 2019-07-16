@@ -1,4 +1,19 @@
-chromium-widevine
-drawio-desktop
-nouveau-fw
-watchman
+conan
+# cower # only available in aur-dev -- is that possible?
+firefox-extension-textern-native-git
+fuse-overlayfs-git
+keepassx
+# libnetctlgui # see netctl-gui
+mediathek
+neovim-symlinks
+# netctl-gui # brings in too much dependencies -- we actually only want a part of that
+robocode
+simple-mtpfs
+ttf-cheapskate
+ttf-freebanglafont
+ttf-mph-2b-damase
+ttf-ubraille
+uefi-shell-git
+vdhcoapp-bin
+vimb
+xfig
