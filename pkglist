@@ -2,11 +2,11 @@ conan
 # cower # only available in aur-dev -- is that possible?
 firefox-extension-textern-native-git
 fuse-overlayfs-git
-# keepassx # fails because dependency 'qt4' takes too long and produces too much output
 # libnetctlgui # see netctl-gui
 mediathek
 neovim-symlinks
 # netctl-gui # brings in too much dependencies -- we actually only want a part of that
+onedrive
 robocode
 simple-mtpfs
 ttf-cheapskate
