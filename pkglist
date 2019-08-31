@@ -1,11 +1,13 @@
 conan
 # cower # only available in aur-dev -- is that possible?
+firebase-tools
 firefox-extension-textern-native-git
 fuse-overlayfs-git
 # libnetctlgui # see netctl-gui
 mediathek
 neovim-symlinks
 # netctl-gui # brings in too much dependencies -- we actually only want a part of that
+notable-bin
 onedrive
 robocode
 simple-mtpfs
