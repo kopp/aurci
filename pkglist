@@ -9,6 +9,7 @@ neovim-symlinks
 # netctl-gui # brings in too much dependencies -- we actually only want a part of that
 notable-bin
 onedrive
+onedrive-abraunegg
 plantuml
 robocode
 simple-mtpfs
