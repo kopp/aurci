@@ -1,5 +1,6 @@
 conan
 # cower # only available in aur-dev -- is that possible?
+cura
 firebase-tools
 firefox-extension-textern-native-git
 fuse-overlayfs-git
