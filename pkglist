@@ -5,6 +5,7 @@ firebase-tools
 firefox-extension-textern-native-git
 fuse-overlayfs-git
 # libnetctlgui # see netctl-gui
+micronucleus-git
 mediathek
 mons
 neovim-symlinks
