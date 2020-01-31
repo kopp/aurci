@@ -11,7 +11,6 @@ declare -r pkgrepo="${1#*/}"
 declare -a pkglist=()
 declare -a pkgkeys=()
 declare -a pkgdeps=()
-declare -a missing_dependencies=()
 
 # Remove comments or blank lines.
 for pkgfile in "pkglist" "pkgkeys"; do
@@ -37,9 +36,6 @@ cd ".."
 for pkgkey in ${pkgkeys[@]}; do
   gpg --recv-keys --keyserver "hkp://ipv4.pool.sks-keyservers.net" $pkgkey
 done
-
-# Manually add missing build dependencies -- i.e. dependencies which were not declared in PKGBUILD files.
-sudo pacman -S "${missing_dependencies[@]}"
 
 # Build outdated packages.
 aur sync -d $pkgrepo --root "${HOME}/bin" -n ${pkglist[@]}
