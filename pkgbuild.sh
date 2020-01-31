@@ -11,6 +11,7 @@ declare -r pkgrepo="${1#*/}"
 declare -a pkglist=()
 declare -a pkgkeys=()
 declare -a pkgdeps=()
+declare -a missing_dependencies=()
 
 # Remove comments or blank lines.
 for pkgfile in "pkglist" "pkgkeys" "missing_dependencies"; do
@@ -25,8 +26,7 @@ mapfile missing_dependencies < "missing_dependencies"
 # Create package list with dependencies.
 mapfile pkgdeps < <(echo ${pkglist[@]} | aur depends -n)
 pkgdeps+=("${pkglist[@]}")
-
-# Manually add missing dependencies -- i.e. dependencies which were not declared in 
+# this also contains the missing dependencies
 pkgdeps+=("${missing_dependencies[@]}")
 
 # Remove packages from repository.
@@ -40,6 +40,9 @@ cd ".."
 for pkgkey in ${pkgkeys[@]}; do
   gpg --recv-keys --keyserver "hkp://ipv4.pool.sks-keyservers.net" $pkgkey
 done
+
+# Manually add missing build dependencies -- i.e. dependencies which were not declared in PKGBUILD files.
+sudo pacman -S "${missing_dependencies[@]}"
 
 # Build outdated packages.
 aur sync -d $pkgrepo --root "${HOME}/bin" -n ${pkglist[@]}
