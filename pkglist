@@ -8,6 +8,7 @@ fuse-overlayfs-git
 #micronucleus-git  # currently build failing due to missing dependencies in PKGLIST: <usb.h> not found which is in libusb-compat
 mediathek
 mons
+mu-editor
 neovim-symlinks
 # netctl-gui # brings in too much dependencies -- we actually only want a part of that
 notable-bin
