@@ -7,8 +7,11 @@ RUN pacman -Syu --noconfirm
 RUN pacman -S --needed --noconfirm base-devel
 
 # Install missing dependencies
-# python-setuptools: python-colorzero
-RUN pacman -S --needed --noconfirm python-setuptools
+# | package                 | missed by
+# | ----------------------- | ----------
+# python-setuptools         | python-colorzero
+# tk                        | python-guizero
+RUN pacman -S --needed --noconfirm python-setuptools tk
 
 # Clear cache.
 RUN pacman -Scc --noconfirm
