@@ -5,10 +5,10 @@ firebase-tools
 firefox-extension-textern-native-git
 fuse-overlayfs-git
 # libnetctlgui # see netctl-gui
-#micronucleus-git  # currently build failing due to missing dependencies in PKGLIST: <usb.h> not found which is in libusb-compat
+micronucleus-git  # missing dependency: libusb-compat
 mediathek
 mons
-mu-editor
+mu-editor  # missing dependency: python-setuptools, tk
 neovim-symlinks
 # netctl-gui # brings in too much dependencies -- we actually only want a part of that
 notable-bin

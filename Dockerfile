@@ -11,7 +11,8 @@ RUN pacman -S --needed --noconfirm base-devel
 # | ----------------------- | ----------
 # python-setuptools         | python-colorzero
 # tk                        | python-guizero
-RUN pacman -S --needed --noconfirm python-setuptools tk
+# libusb-compat             | micronucleus-git
+RUN pacman -S --needed --noconfirm python-setuptools tk libusb-compat
 
 # Clear cache.
 RUN pacman -Scc --noconfirm
