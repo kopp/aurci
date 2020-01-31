@@ -13,17 +13,21 @@ declare -a pkgkeys=()
 declare -a pkgdeps=()
 
 # Remove comments or blank lines.
-for pkgfile in "pkglist" "pkgkeys"; do
+for pkgfile in "pkglist" "pkgkeys" "missing_dependencies"; do
   sed -i -e "/\s*#.*/s/\s*#.*//" -e "/^\s*$/d" $pkgfile
 done
 
 # Load files.
 mapfile pkglist < "pkglist"
 mapfile pkgkeys < "pkgkeys"
+mapfile missing_dependencies < "missing_dependencies"
 
 # Create package list with dependencies.
 mapfile pkgdeps < <(echo ${pkglist[@]} | aur depends -n)
 pkgdeps+=("${pkglist[@]}")
+
+# Manually add missing dependencies -- i.e. dependencies which were not declared in 
+pkgdeps+=("${missing_dependencies[@]}")
 
 # Remove packages from repository.
 cd "bin"
