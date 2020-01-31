@@ -6,6 +6,10 @@ RUN pacman -Syu --noconfirm
 # Install base-devel group.
 RUN pacman -S --needed --noconfirm base-devel
 
+# Install missing dependencies
+# python-setuptools: python-colorzero
+RUN pacman -S --needed --noconfirm python-setuptools
+
 # Clear cache.
 RUN pacman -Scc --noconfirm
 
