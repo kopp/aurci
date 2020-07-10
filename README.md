@@ -1,3 +1,8 @@
+# DEPRECATED
+
+Please see https://github.com/kopp/aurci2/ for a new approach that uses GitHub actions.
+
+
 # aurci [![Build Status](https://travis-ci.org/kopp/aurci.svg?branch=master)](https://travis-ci.org/kopp/aurci)
 
 Forked from [`localnet/aurci`](https://github.com/localnet/aurci).
